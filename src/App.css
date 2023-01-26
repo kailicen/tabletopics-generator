@@ -49,7 +49,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 2rem;
+  margin: 1rem;
 }
 .footer__a {
   text-decoration: none;
@@ -76,8 +76,8 @@
     font-size: 14px;
   }
 }
-@media (pointer: coarse) {
-  button.touch {
+@media (hover: hover) {
+  .question-block__button:hover {
     background-color: initial;
   }
 }

@@ -24,11 +24,7 @@ function App() {
         . Questions from the <a className='footer__a' href='https://dist8tm.org/wp-content/uploads/2017/08/365_Sample_Table_Topics_Questions.pdf' 
         target='_blank' rel="noreferrer">365 Table Topics Questions</a>.
       </div>
-      {/* <div className='title'>
-        <div className='title__div'>Hello, I'm Kaili.</div>
-        <div className='title__div'>I build websites, flip perspectives,</div>
-        <div className='title__div'>and leveling up daily.</div>
-      </div> */}
+
     </div>
   );
 }
