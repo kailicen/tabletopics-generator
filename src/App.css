@@ -43,9 +43,6 @@
   background-color: #333;
   color:white;
 }
-.question-block__button:active {
-  color:#333;
-}
 .footer {
   font-family: sans-serif;
   font-size: 16px;
@@ -77,5 +74,10 @@
   }
   .footer {
     font-size: 14px;
+  }
+}
+@media (pointer: coarse) {
+  button.touch {
+    background-color: initial;
   }
 }
