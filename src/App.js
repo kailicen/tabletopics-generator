@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Questions from './components/Questions';
+import React, { useState, useEffect } from 'react';
+
+
 
 function App() {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    fetch('questions.json')
+      .then(response => response.json())
+      .then(data => {
+        setQuestions(data);
+      })
+      .catch(err => console.log(err));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Questions questions={questions} />
+      <div className='footer'>
+        <a className='footer__a' href='https://kailicen.com' target='_blank' rel="noreferrer">Kaili Cen</a>
+        . Questions from the <a className='footer__a' href='https://dist8tm.org/wp-content/uploads/2017/08/365_Sample_Table_Topics_Questions.pdf' 
+        target='_blank' rel="noreferrer">365 Table Topics Questions</a>.
+      </div>
+      {/* <div className='title'>
+        <div className='title__div'>Hello, I'm Kaili.</div>
+        <div className='title__div'>I build websites, flip perspectives,</div>
+        <div className='title__div'>and leveling up daily.</div>
+      </div> */}
     </div>
   );
 }
